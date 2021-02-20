@@ -12,7 +12,7 @@ pipeline{
               }
           }
           stage('Compile'){
-              agent {label 'linux_slave'}
+              agent any
               steps{
                   git 'https://github.com/devops-trainer/DevOpsClassCodes.git'
                   sh 'mvn compile'
